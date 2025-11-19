@@ -5,11 +5,14 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(network_messenger src/client/main_client.cpp
         src/client/client.cpp
-        src/client/client.h)
+        src/client/client.h
+        src/common/socket.h
+        src/common/socket.cpp)
 
 add_executable(network_server src/server/main_server.cpp
         src/server/server.cpp
-        src/server/server.h)
+        src/server/server.h
+        src/common/socket.h)
 
 target_link_libraries(network_messenger Ws2_32)
 target_link_libraries(network_server Ws2_32)
